@@ -4,6 +4,7 @@ import {redirect, useNavigate, useNavigation} from "react-router-dom"
 import React, {useState} from "react";
 import {Button} from "reactstrap";
 import {ExtractJWT} from "../Utils/ExtractJWT";
+import {AddCoupon} from "./components/AddCoupon";
 
 export const ManagePage = () => {
 
@@ -56,7 +57,7 @@ export const ManagePage = () => {
             <div className="tab-content" id="nav-tabContent">
                 <div className="tab-pane fade show active" id="nav-add-book" role="tabpanel"
                 aria-labelledby='nav-add-coupon-tab'>
-                    {addCouponClick? <>Create new Coupon</>:<></>}
+                    {addCouponClick? <><AddCoupon/></>:<></>}
                 </div>
                 <div className="tab-pane fade" id="nav-quantity" role="tabpanel"
                      aria-labelledby='nav-quantity-tab'>

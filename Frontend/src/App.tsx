@@ -45,8 +45,8 @@ function App() {
                     <Route path='/register' element={<RegisterPath/>}/>
                     <Route path='/register-company' element={<RegisterCompany/>}/>
                     <Route path='/register-customer' element={<RegisterCustomer/>}/>
-                    <Route path='/profile' element={token ? <ProfilePage/> : <Login/>}/>
-                    <Route path='/manage' element={token ? <ManagePage/> : <Login/>}/>
+                    <Route path='/profile' element={token ? (isCompany ? <ManagePage/>:<ProfilePage/>) : <Login/>}/>
+                    <Route path='/manage' element={token ? (isCompany ? <ManagePage/>:<ProfilePage/>) : <Login/>}/>
 
                 </Routes>
             </div>
